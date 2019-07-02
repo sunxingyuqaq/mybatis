@@ -1,0 +1,43 @@
+= mybatis boot test
+
+
+[[_overview]]
+== 概览
+mybatis-plus swagger demo
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 2.0
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : XingYu Sun
+__邮箱__ : 12870621552@qq.com
+
+
+=== 许可信息
+[%hardbreaks]
+__许可证__ : apache license
+__许可网址__ : http://www.apache.org/
+__服务条款__ : https://www.baidu.com
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : 127.0.0.1:9000
+__基础路径__ : /
+
+
+=== 标签
+
+* test : Test Controller
+
+
+=== 生成
+
+* `application/json;charset=utf-8`
+
+
+

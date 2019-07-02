@@ -1,0 +1,131 @@
+
+h2. 资源 {anchor:paths}
+
+h3. Test {anchor:test_resource}
+Test Controller
+
+
+h4. del {anchor:delusingget}
+{noformat}
+GET /api/del
+{noformat}
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||object|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/api/del
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. getAll {anchor:getallusingpost}
+{noformat}
+POST /api/post
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||类型||
+|*FormData*|*age*\\ \\ _必填_||integer (int32)|
+|*FormData*|*id*\\ \\ _必填_||integer (int64)|
+|*FormData*|*name*\\ \\ _必填_||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||object|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/x-www-form-urlencoded{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/api/post
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"test"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 获取用户信息 {anchor:getusingget}
+{noformat}
+GET /api/users
+{noformat}
+
+
+h5. 说明
+获取用户信息
+
+
+h5. 参数
+
+||类型||名称||类型||
+|*Query*|*id*\\ \\ _必填_||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||object|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/api/users?id=string
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+

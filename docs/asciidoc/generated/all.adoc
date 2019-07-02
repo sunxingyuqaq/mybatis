@@ -1,0 +1,206 @@
+= mybatis boot test
+
+
+[[_overview]]
+== 概览
+mybatis-plus swagger demo
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 2.0
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : XingYu Sun
+__邮箱__ : 12870621552@qq.com
+
+
+=== 许可信息
+[%hardbreaks]
+__许可证__ : apache license
+__许可网址__ : http://www.apache.org/
+__服务条款__ : https://www.baidu.com
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:9000
+__基础路径__ : /
+
+
+=== 标签
+
+* test : Test Controller
+
+
+=== 生成
+
+* `application/json;charset=utf-8`
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_test_resource]]
+=== Test
+Test Controller
+
+
+[[_delusingget]]
+==== del
+....
+GET /api/del
+....
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|object
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/api/del
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_getallusingpost]]
+==== getAll
+....
+POST /api/post
+....
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|类型|名称|类型
+|**FormData**|**age** +
+__必填__|integer (int32)
+|**FormData**|**id** +
+__必填__|integer (int64)
+|**FormData**|**name** +
+__必填__|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|object
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/x-www-form-urlencoded`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/api/post
+----
+
+
+====== 请求 formData
+[source,json]
+----
+"test"
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_getusingget]]
+==== 获取用户信息
+....
+GET /api/users
+....
+
+
+===== 说明
+获取用户信息
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|类型|名称|类型
+|**Query**|**id** +
+__必填__|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|object
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/api/users?id=string
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+
+
+
+
+

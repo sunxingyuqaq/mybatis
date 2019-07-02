@@ -1,0 +1,38 @@
+h1. mybatis boot test
+
+
+h2. 概览 {anchor:overview}
+mybatis-plus swagger demo
+
+
+h3. 版本信息
+_版本_ : 2.0
+
+
+h3. 联系方式
+_名字_ : XingYu Sun\\ 
+_邮箱_ : 12870621552@qq.com
+
+
+h3. 许可信息
+_许可证_ : apache license\\ 
+_许可网址_ : http://www.apache.org/\\ 
+_服务条款_ : https://www.baidu.com
+
+
+h3. URI scheme
+_域名_ : localhost:9000\\ 
+_基础路径_ : /
+
+
+h3. 标签
+
+* test : Test Controller
+
+
+h3. 生成
+
+* {noformat}application/json;charset=utf-8{noformat}
+
+
+
