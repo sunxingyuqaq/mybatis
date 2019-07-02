@@ -4,8 +4,6 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      username: root
-      password: root
       stat-view-servlet:
         login-username: admin
         login-password: admin
@@ -23,7 +21,7 @@ spring:
       max-active: 10
       min-idle: 2
       max-wait: 30000
-      #time-between-eviction-runs-millis:
+      time-between-eviction-runs-millis: 3000
       #time-between-log-stats-millis:
       #min-evictable-idle-time-millis:
       #max-evictable-idle-time-millis:
@@ -69,9 +67,4 @@ mybatis-plus:
   mapper-locations: classpath*:mybatis/mapper/*.xml
 logging:
   config: classpath:config/logback-spring.xml
-#  path: log/mybatis/
-#  level:
-#    default: debug
-#  group:
-#    default: com.study.boot.mybatis.dao,java.sql.Statement,java.sql.PreparedStatement
 
