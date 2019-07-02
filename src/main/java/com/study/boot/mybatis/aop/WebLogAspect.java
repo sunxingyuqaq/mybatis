@@ -66,7 +66,7 @@ public class WebLogAspect {
     public void before(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         String s = Arrays.toString(args);
-        LOGGER.info("before ...args " + s);
+        LOGGER.debug("before ...args " + s);
     }
 
     @Around("pointcut()")
@@ -74,7 +74,7 @@ public class WebLogAspect {
         // 获取request
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
-        Assert.notNull(servletRequestAttributes,"servletRequestAttributes can not be null");
+        Assert.notNull(servletRequestAttributes, "servletRequestAttributes can not be null");
         HttpServletRequest request = servletRequestAttributes.getRequest();
         //目标方法实体
         Method method = ((MethodSignature) point.getSignature()).getMethod();
@@ -226,7 +226,7 @@ public class WebLogAspect {
     @SuppressWarnings("unchecked")
     private Map<String, Object> getArgsMap(ProceedingJoinPoint point, Map<String, Object> methodParamNames) {
         Object[] args = point.getArgs();
-        if (null == methodParamNames) {
+        if (null == methodParamNames || methodParamNames.isEmpty()) {
             return Collections.EMPTY_MAP;
         }
         for (Map.Entry<String, Object> entry : methodParamNames.entrySet()) {

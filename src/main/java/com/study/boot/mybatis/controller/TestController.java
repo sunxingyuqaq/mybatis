@@ -3,6 +3,7 @@ package com.study.boot.mybatis.controller;
 import com.study.boot.mybatis.annotation.SystemLog;
 import com.study.boot.mybatis.dao.UserMapper;
 import com.study.boot.mybatis.entity.User;
+import com.study.boot.mybatis.enums.LogTypeEnum;
 import com.study.boot.mybatis.model.UserModel;
 import com.study.boot.mybatis.service.UserService;
 import io.swagger.annotations.Api;
@@ -54,6 +55,7 @@ public class TestController {
     }
 
     @GetMapping("/del")
+    @SystemLog(type = LogTypeEnum.DUBBO)
     public Object del() {
         return userMapper.deleteById(3);
     }
