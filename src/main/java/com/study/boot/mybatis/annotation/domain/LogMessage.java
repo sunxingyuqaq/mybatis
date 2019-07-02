@@ -1,7 +1,6 @@
 package com.study.boot.mybatis.annotation.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.study.boot.mybatis.entity.BaseEntity;
 import lombok.Getter;

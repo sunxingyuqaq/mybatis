@@ -84,8 +84,8 @@ public class MybatisApplication {
             }
             Page<User> page = new Page<>();
             page.setSize(2);
-            IPage<User> userIPage = userMapper.selectPage(page, new QueryWrapper<User>().likeLeft("name", "Jack"));
-            userIPage.getRecords().forEach(System.out::println);
+            IPage<User> userPage = userMapper.selectPage(page, new QueryWrapper<User>().likeLeft("name", "Jack"));
+            userPage.getRecords().forEach(System.out::println);
             userMapper.deleteById(1);
             User user = userMapper.selectById(2);
             if (user != null) {

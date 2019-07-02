@@ -31,6 +31,7 @@ public enum LogScopeEnum {
         String str = "";
         switch (this) {
             case ALL:
+                str = "ALL";
                 break;
             case BEFORE:
                 str = "REQUEST";
