@@ -113,7 +113,7 @@ public class WebLogAspect {
      */
     private void handleRequestLog(ProceedingJoinPoint point, SystemLog systemLog, HttpServletRequest request,
                                   LogMessage logMessage, String logSwitch) throws Exception {
-        LOGGER.info("request info ..." + request.getQueryString());
+        LOGGER.info("request into ..." + request.getQueryString());
         String paramsText = "";
         //参数列表
         String includeParam = systemLog.include();
