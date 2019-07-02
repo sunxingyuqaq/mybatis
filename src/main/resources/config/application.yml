@@ -1,0 +1,85 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    druid:
+      url: jdbc:h2:mem:test
+      driver-class-name: org.h2.Driver
+      username: root
+      password: root
+      stat-view-servlet:
+        login-username: admin
+        login-password: admin
+        url-pattern: /druid/*
+        reset-enable: false
+        allow: 127.0.0.1
+        enabled: true
+      web-stat-filter:
+        enabled: true
+        url-pattern: "/*"
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+        session-stat-enable: true
+        session-stat-max-count: 100
+      initial-size: 5
+      max-active: 10
+      min-idle: 2
+      max-wait: 30000
+      #time-between-eviction-runs-millis:
+      #time-between-log-stats-millis:
+      #min-evictable-idle-time-millis:
+      #max-evictable-idle-time-millis:
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      validation-query: select 1
+      #validation-query-timeout:
+      #use-global-datasource-stat:
+      #async-init:
+      #clear-filters-enable:
+      #reset-stat-enable:
+      #not-full-timeout-retry-count:
+      #max-wait-thread-count:
+      #fail-fast:
+      #phyTimeout-millis:
+      #keep-alive:
+      #pool-prepared-statements:
+      #init-variants:
+      #init-global-variants:
+      #use-unfair-lock:
+      #kill-when-socket-read-timeout:
+      #connection-properties:
+      #max-pool-prepared-statement-per-connection-size:
+      #share-prepared-statements:
+      #connection-errorretry-attempts:
+      #break-after-acquire-failure:
+      #stat-sqlmax-size: 100
+      #connection-init-sqls: select 1 FROM DUAL
+      filters: stat,wall # 注意这个值和druid原生不一致，默认启动了stat,wall
+      #aop-patterns: com.study.boot.mybatis.dao.*
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  cache:
+    type: simple
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    worker-id: 0
+    datacenter-id: 0
+    db-config:
+      db-type: h2
+  mapper-locations: classpath*:mybatis/mapper/*.xml
+logging:
+  config: classpath:config/logback-spring.xml
+#  path: log/mybatis/
+#  level:
+#    default: debug
+#  group:
+#    default: com.study.boot.mybatis.dao,java.sql.Statement,java.sql.PreparedStatement
+
